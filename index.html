@@ -10,17 +10,19 @@
     <link rel="stylesheet" href="css/compiled/bootstrap-overrides.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="css/compiled/theme.css" />
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="css/compiled/index.css" type="text/css" media="screen" />    
     <link rel="stylesheet" type="text/css" href="css/lib/animate.css" media="screen, projection" />    
+
+    <script type="text/javascript" src="http://use.typekit.net/jtx6mqv.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
 <body class="pull_top">
-    
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -51,7 +53,20 @@
         </div>
     </div>
 
-    <section id="feature_slider" class="lol">
+    <div id="feature_slider" class="lol" >
+    <div id="map-row"></div>
+
+            <div class="info">
+                <h2 style="color:white;font-size: 35px;line-height: 35px;text-transform: uppercase">Školení s důrazem na efektivitu, úsporu a jednoduchost.</h2>
+            </div>
+            
+            <img class="asset left-20 sp600 t120 z5" src="img/gisimages/programs/qgislogo.png" style="left: 550px;top: 180px;z-index: 5;display: inline;position: absolute;width:250px" />
+
+            <img class="asset left-20 sp600 t120 z2" src="img/gisimages/programs/grasslogo.png" style="left: 700px;top: 100px;z-index: 2;display: inline;position: absolute;width:300px" />
+
+            <img class="asset left-20 sp600 t120 z5" src="img/gisimages/programs/ol3logo.png" style="left: 900px;top: 220px;z-index: 5;display: inline;position: absolute;width:250px" />
+
+
         <!-- 
             Each slide is composed by <img> and .info
             - .info's position is customized with css in index.css
@@ -66,15 +81,9 @@
 
             For the backgrounds, you can combine from the bgs folder :D
         -->
-        <article class="slide" id="showcasing" style="background: url('img/gisimages/background/landscape1.jpg') repeat-x top center;">
-            <div class="info">
-                <a href="qgis.html"><h2>QGIS</h2></a>
-                <h3 style="color:white">Prověřený nástroj s příjemným uživatelským prostředím</h3>
-            </div>
-            <img class="asset left-20 sp600 t120 z1" src="img/gisimages/programs/qgis1_th.png" />
-        </article>
 
 
+<!--
         <article class="slide" id="showcasing" style="background: url('img/gisimages/background/dem.jpg') repeat-x top center;">
             <div class="info">
                 <h2>DEM</h2>
@@ -99,7 +108,7 @@
             </div>
         </article>
 
-<!--
+
         <article class="slide" id="ideas" style="background: url('img/backgrounds/aqua.jpg') repeat-x top center;">
             <div class="info">
                 <h2>We love to turn ideas into beautiful things.</h2>
@@ -110,7 +119,7 @@
         </article>
 
 -->      
-    </section>
+    </div>
 
     <div id="showcase">
         <div class="container">
@@ -467,10 +476,90 @@
     </footer>
 
     <!-- Scripts -->
+
+<script src='./js/ol/ol-simple.js'></script>
+<script>
+
+var map = new ol.Map({
+    interactions:[],
+    controls:[],
+    layers: [
+        new ol.layer.Tile({
+            source: new ol.source.TileJSON({
+                url: 'http://api.tiles.mapbox.com/v3/vdubr.hm7em2n7.jsonp',
+                crossOrigin: 'anonymous'
+            })
+        })
+    ],
+    target: 'map-row',
+    view: new ol.View2D({
+        center: [1790460.9505519667, 5772524.376096505],
+        zoom: 5
+    })
+});
+
+var view = map.getView()
+view.setCenter([1605559,6459999])
+view.setZoom(7)
+
+var interestingPlaces = [
+{
+    zoom:7,
+    center:[1605559,6459999]
+},
+{
+    zoom:4,
+    center:[-405422.00,4907562.96]
+},{
+    zoom:2,
+    center:[-8238307.24,4970299.63]
+}
+]
+
+var placeIndex = 1
+
+function changeCenter(){
+    var place = interestingPlaces[placeIndex]
+
+
+
+
+    var duration = 3000;
+    var start = +new Date();
+    var pan = ol.animation.pan({
+        duration: duration,
+        source: /** @type {ol.Coordinate} */ (view.getCenter()),
+        start: start
+    });
+
+    var bounce = ol.animation.bounce({
+        duration: duration,
+        resolution: 4 * view.getResolution(),
+        start: start
+    });
+    map.beforeRender(pan, bounce);
+    view.setCenter(place.center);
+
+
+
+if(placeIndex == interestingPlaces.length - 1){
+placeIndex = 0
+}else{
+placeIndex = placeIndex + 1
+}
+}
+
+window.setInterval(
+changeCenter,7000
+    )
+
+
+</script>
+
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/theme.js"></script>
 
-    <script type="text/javascript" src="js/index-slider.js"></script>	
+    
 </body>
 </html>
