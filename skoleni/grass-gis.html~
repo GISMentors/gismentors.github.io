@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GISMentors - školení QGIS</title>
+    <title>Business Template</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
@@ -71,7 +71,9 @@
                 </div>
 
                 <div class="row subtitle">
-                    <h2>Nejrozšířenější open source GIS program používaný na celém světě.</h2>
+                    <h2>
+                        Nejrozšířenější open source GIS program používaný na celém světě. 
+                    </h2>
                 </div>
 
                 <div class="row feature">
