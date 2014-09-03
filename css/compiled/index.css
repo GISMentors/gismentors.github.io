@@ -40,8 +40,7 @@ float: none !important;
 /* Main Slider
 -------------------------------------------------- */
 #feature_slider {
-  height: 720px;
-  height: 480px;
+  height: 200px;
   background: #262626;
   z-index: 1;
   margin-bottom: 40px; }
@@ -115,9 +114,8 @@ float: none !important;
       display: none; }
     #feature_slider .info {
       position: absolute;
-      top: 150px;
       left: 13%;
-      width: 30%;
+      width: 450px;
       z-index: 10; }
       #feature_slider .slide#showcasing .info h2 {
         color: #fff;
@@ -343,7 +341,7 @@ float: none !important;
       color: #838385;
       margin-bottom: 5px;
       font-size: 14px; }
-  #in_pricing .plan a.order, 
+  #in_pricing .plan a.order,
   .gisoffer.order{
     background-color: #2190DB;
     text-align: center;
@@ -958,4 +956,3 @@ float: none !important;
     width: 60%; }
   #contact .map .box_wrapp {
     width: 100%; } }
-
