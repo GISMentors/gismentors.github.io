@@ -15,7 +15,7 @@
 
 .gisoffer{
     margin-bottom: 20px !important;
-    font-size: 1.5em !important;
+    font-size: 1.3em !important;
     width: 60% !important;
     padding: 7px !important;
     margin-top: 30px !important;
@@ -115,7 +115,7 @@ float: none !important;
     #feature_slider .info {
       position: absolute;
       left: 1%;
-      top: 5%;
+      top: 12%;
       width: 450px;
       z-index: 10; }
       #feature_slider .slide#showcasing .info h2 {
