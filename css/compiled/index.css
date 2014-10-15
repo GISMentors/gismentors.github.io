@@ -42,8 +42,7 @@ float: none !important;
 #feature_slider {
   height: 200px;
   background: #262626;
-  z-index: 1;
-  margin-bottom: 40px; }
+  z-index: 1;}
   #feature_slider h1 {
     font-weight: 100;
     color: #ccc;
