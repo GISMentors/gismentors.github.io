@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GISMentors - Školení GRASS GIS</title>
+    <title>GISMentors - Školení GeoPython</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/compiled/theme.css" />
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,900,300italic,400italic,700italic,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
-    
+
     <link rel="stylesheet" href="../css/compiled/index.css" type="text/css" media="screen" />    
     <link rel="stylesheet" href="../css/compiled/features.css" type="text/css" media="screen" />
     <link rel="stylesheet" type="text/css" href="../css/lib/animate.css" />
@@ -64,23 +64,43 @@
       <div class="container">
         <!-- Feature Wrapper -->
         <div class="feature_wrapper option1">
-          <img src="../img/gisimages/programs/postgis_logo.png" style="float:right;">
+          <img src="../img/gisimages/programs/geopython_logo.png" style="float:right;">
           <div class="section_header">
-            <h1>PostGIS</h1>
+            <h1>GeoPython</h1>
           </div>
           <div class="row subtitle">
-            <h2>Nejrozšířenější Open Source geodatabáze.</h2>
+            <h2>Nejpoužívanější programovací platforma v GIS.</h2>
           </div>
-          <div align="right" style="margin-right: 40px">
-            <a href="http://postgis.net">http://postgis.net</a>
+          <div align="right" style="margin-right: 30px">
+            <a href="https://github.com/geopython">https://github.com/geopython</a>
           </div>
           
           <div style="margin-top: 10px; margin-bottom: 30px; text-align: justify">
-            <b>PostGIS</b> je nadstavba umožňující správu, manipulaci a
-            analýzu geodat v prostředí relačně-objektového
-            databázového systému PostgreSQL. PostGIS představuje
-            plnohodnotnou Open Source alternativu k
-            proprietárním geodatabázím typu Oracle Spatial.
+
+            Programovací jazyk <a href="http://python.org">Python</a>
+            se dnes řadí mezi nejrozšířenější jazyky se širokou
+            uživatelskou základnou. Rozhraní pro jazyk Python
+            podporuje celá řada externích programátorských
+            knihoven. Python razí filozofii "baterie jsou přidány",
+            což znamená, že na většinu základních ale i pokročilých
+            úloh již existuje nějaká knihovna či nástroj, který lze
+            použít.
+
+            Python je jedním z nejvíce podporovaných jazyků na různých
+            GIS platformách. Aplikační rozhraní pro Python najdeme v
+            základních knihovnách jako
+            je <a href="http://www.gdal.org">GDAL</a>,
+            <a href="http://trac.osgeo.org/proj">Proj4</a>, serverových
+            programech jako
+            je <a href="http://www.mapserver.org">MapServer</a> nebo v
+            webovém
+            rozhraní <a href="http://www.geoserver.org">GeoServeru</a>. Můžete
+            v něm vytvářet vlastní moduly do desktopových programů
+            jako
+            je <a href="http://www.qgis.org">QGIS</a>, <a href="http://grass.osgeo.org">GRASS
+            GIS</a> či <a href="http://www.esri.com">Esri ArcGIS</a> a
+            řadě dalších.
+
           </div>
           
           <!-- Feature Wrapper -->
@@ -92,36 +112,7 @@
             <!-- Features Row -->
             <div class="row">
               <!-- Feature -->
-              <div class="col-sm-4">
-                <div class="feature">
-                  <div class="img">
-                    <a name="zacatecnik"><img src="../img/features-ico6.png" /></a>
-                  </div>
-                  <div class="text">
-                    <h6>Začátečník</h6>
-                    <p>
-                      V tomto kurzu Vás naučíme zvládat základní
-                      techniky práce s geografickými daty v
-                      geodatabázi PostGIS pomocí jazyka SQL. Součástí
-                      bude úvod do atributových a především
-                      prostorovým SQL dotazům. OGC specifikace Simple
-                      Features.
-                    </p>
-                    <p>
-                      2 dny / 8000,- Kč
-                    </p>
-                    <p><div align="center">
-                        <i>Ceny jsou uvedeny včetně DPH.</i>
-                    </div></p>
-                    <p>
-                      <!-- <h6>Nejbližší termín:<br>18-19.11.2014</h6> -->
-                      <h6>V případě zájmu nás kontaktujte.</h6> 
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- Feature -->
-              <div class="col-sm-4">
+              <div class="col-sm-10">
                 <div class="feature">
                   <div class="img">
                     <a name="pokrocily"><img src="../img/features-ico5.png" /></a>
@@ -129,49 +120,34 @@
                   <div class="text">
                     <h6>Pokročilý</h6>
                     <p>
-                      PostGIS jako komplexní uložiště rastrových a
-                      vektorových geodat.  Zaměříme se na konkrétní
-                      požadavky zákazníka.<br>
-                      
-                      Tento kurz je určen všem, kteří potřebují
-                      provádět pokročilé GIS analýzy přímo v prostředí
-                      geodatabáze. Zaměříme se na uložení rastrových
-                      dat v geodatabázi a jejich kombinaci s
-                      vektorovými daty, dále na síťové analýzy
-                      (pgRouting) a správu topologických vektorových
-                      dat (PostGIS Topology).
+
+                      Přehled nástrojů pro Python a GIS, práce s
+                      webovými službami OGC, metadaty, stahování dat
+                      pomocí
+                      knihovny <a href="http://geopython.github.io/OWSLib/">OWSLib</a>. Práce
+                      s vektorovými daty pomocí
+                      knihovny <a href="http://toblerity.org/fiona/">Fiona</a>
+                      a <a href="http://www.gdal.org">OGR</a>. Prostorové
+                      analýzy s
+                      knihovnou <a href="http://toblerity.org/shapely/">Shapely</a>. Rychle
+                      na rastrová data s
+                      knihovnou <a href="https://github.com/mapbox/rasterio">Rasterio</a>,
+                      základní práce s rastrovými daty pomocí
+                      knihovny <a href="http://www.gdal.org">GDAL</a>. Automatická
+                      konfigurace MapServeru - rozhraní
+                      <a href="http://mapserver.org/mapscript/python.html">python-mapscript</a>,
+                      konfigurace GeoServeru <a href="https://github.com/boundlessgeo/gsconfig">gsconfig</a>.
                     </p>
-                    <p>
-                      2 dny / 9300,- Kč
-                    </p>
+                      <br>
+                      <div align="left">
+			&nbsp;&nbsp;1 000,- Kč student, včasná registrace<br>
+			&nbsp;&nbsp;8 000,- Kč včasná registrace<br>
+			10 000,- Kč plná cena<br>
+		    </div>
                     <p><div align="center">
                         <i>Ceny jsou uvedeny včetně DPH.</i>
                     </div></p>
-                  </div>
-                </div>
-              </div>
-              <!-- Feature -->
-              <div class="col-sm-4">
-                <div class="feature last">
-                  <div class="img">
-                    <a name="expert"><img src="../img/features-ico7.png" /></a>
-                  </div>
-                  <div class="text">
-                    <h6>Expert/vývojář</h6>
-                    <p>
-                      Vytěžte z geodatabáze PostGIS maximum. Napište
-                      si vlastní funkce v procedurálním jazyku
-                      PL/pgSQL nebo PL/Python. Přistupujte k datům
-                      PostGIS z jazyka Python anebo pomocí knihovny
-                      GDAL. Kurz je určen pouze pokročilým uživatelům,
-                      obsah je sestaven na míru podle potřeb zákazníka
-                      a probíhá formou workshopu s maximálně pěti
-                      účastníky.
-                    </p>
-                    <p>
-                      Cena a délka kurzu je závislá na konkrétních
-                      požadavcích objednatele.
-                    </p>
+
                   </div>
                 </div>
               </div>
@@ -207,23 +183,30 @@
       <div id="team">
         <div class="container">
           <div class="section_header">
-            <h3>Mentors</h3>
+            <h3>Lektoři kurzů</h3>
           </div>
           
           <div class="row people">
             <div class="row row1">
 
               <div class="col-sm-6 bio_box">
-                <a href="mentors/michalek.html"><img src="../img/mentors/jelen.jpg" alt="Jan Michálek"></a>
+                <a href="../mentors/cepicky.html"><img src="../img/mentors/jachym.jpg"
+                alt="Jáchym Čepický"></a>
                 <div class="info" style="max-width: 200px;">
-                  <p class="name">Jan Michálek</p>
+                  <p class="name">Jáchym Čepický</p>
                   <p class="area" style="margin-left: 0px;">
-                    <a class="" href="postgis.html">PostGIS</a>
+                    <a class="" href="grass-gis.html">GRASS GIS</a>
+                    <a class="" href="http://pywps.wald.intevation.org/">PyWPS</a>
+                    <a class="" href="https://github.com/geopython">Geopython</a>
                   </p>
-                  <a href="../mentors/michalek.html"><img src="../img/formname.png" alt="Profil" /></a>
+                  <a href="../mentors/cepicky.html"><img src="../img/formname.png" alt="Profil" /></a>
+                  <a href="https://twitter.com/jachymc" class="twitter">
+                    <span class="socialicons ico2"></span>
+                    <span class="socialicons_h ico2h"></span>
+                  </a>
                 </div>
               </div>
-              
+
               <div class="col-sm-6 bio_box">
                 <a href="../mentors/landa.html"><img src="../img/mentors/martin.jpg"
                 alt="Martin Landa"></a>
@@ -232,13 +215,13 @@
                   <p class="area" style="margin-left: 0px;">
                     <a class="" href="grass-gis.html">GRASS GIS</a>
                     <a class="" href="qgis.html">QGIS</a>
-                    <a class="" href="postgis.html">PostGIS</a>
+                    <a class="" href="http://postgis.net/">PostGIS</a>
                     <a class="" href="http://www.gdal.org/">GDAL</a>
                   </p>
                   <a href="../mentors/landa.html"><img src="../img/formname.png" alt="Profil" /></a>
                 </div>
               </div>
-              
+                            
             </div>
           </div>
         </div>
